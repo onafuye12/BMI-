@@ -3,6 +3,8 @@ from PIL import Image
 
 st.title("BMI Calculator App")
 
+st.camera_input("chese")
+
 weight = st.number_input("what is your weight")
 height = st.number_input("what is your height")
 
@@ -19,4 +21,6 @@ def bmi_index(weight,height):
         
         
 if st.button("calculate Bmi"):
+    st.balloons()
+    st.spinner(text='In progress')
     st.write( bmi_index(weight,height))
